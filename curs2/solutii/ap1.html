@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body onload="addElement()">
+    <ul>
+        <li><a href="ap2.html">Ap2</a></li>
+        <li><a href="ap3.html">Ap3</a></li>
+        <li><a href="ap4.html">Ap4</a></li>
+       
+    </ul>
+    <button onclick="history.back()">Go Back</button>
+    <button onclick="history.forward()">Go Forward</button>
+    <button onclick="history.go(1)">mergi la 1</button>
+    <p>Primul paragraf</p>
+
+    <p id="info"></p>
+
+
+    <script>
+        function addElement(){
+            //1. Create a new element
+            const myp = document.createElement("p");
+            //2. set text
+            const mytext = document.createTextNode('Al 2-lea pargraf');
+            //3. add text
+            myp.appendChild(mytext);
+            //4. set attribute
+            myp.setAttribute("title",'titlul paragraf');
+           
+            //5. set parent element
+            const mybody = document.getElementsByTagName("body")[0];
+            //6. add child element
+            mybody.appendChild(myp);
+        }
+
+        function getBrowserInfo(){
+            document.write('<p> Latime dispozitiv: '+window.screen.width +'</p>');
+            document.write('<p> Inlaltime dispozitiv: '+window.screen.height +'</p>');
+            document.write('<p> Pixel ratio: '+window.devicePixelRatio +'</p>');
+            document.getElementById("info").innerHTML = "<p>Dimensiunile disponibile width/height: " + screen.availWidth + "*" + screen.availHeight+"</p>";
+
+            document.write('<p> Istoric navigare: '+history.length +'</p>');
+
+        }
+        getBrowserInfo();
+    </script>
+</body>
+</html>
