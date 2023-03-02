@@ -1,0 +1,89 @@
+[19:59:43] Error in plugin "gulp-gm"
+Message:
+    Error: Command failed: gm identify: No decode delegate for this image format (/var/folders/mx/8pt7z06n0wj7wxmp3jmdb46m0000gn/T/gm5DU7lt).
+gm identify: Request did not return an image.
+
+Details:
+    domainEmitter: [object Object]
+    domainThrown: false
+
+[19:59:43] gulp-imagemin: ✔ 4-medium.jpg (already optimized)
+
+events.js:288
+      throw er; // Unhandled 'error' event
+      ^
+[PluginError: Error: Command failed: gm identify: No decode delegate for this image format (/var/folders/mx/8pt7z06n0wj7wxmp3jmdb46m0000gn/T/gmpn4l8q).
+gm identify: Request did not return an image.
+] {
+  message: 'Error: Command failed: gm identify: No decode delegate for this image format (/var/folders/mx/8pt7z06n0wj7wxmp3jmdb46m0000gn/T/gmpn4l8q).\n' +
+    'gm identify: Request did not return an image.\n',
+  plugin: 'gulp-gm',
+  showProperties: true,
+  showStack: false,
+  __safety: { toString: [Function: bound ] },
+  domainEmitter: Transform {
+    _readableState: ReadableState {
+      highWaterMark: 16384,
+      buffer: [],
+      length: 0,
+      pipes: [Transform],
+      pipesCount: 1,
+      flowing: true,
+      ended: false,
+      endEmitted: false,
+      reading: false,
+      calledRead: true,
+      sync: false,
+      needReadable: true,
+      emittedReadable: false,
+      readableListening: true,
+      objectMode: true,
+      defaultEncoding: 'utf8',
+      ranOut: true,
+      awaitDrain: 0,
+      readingMore: false,
+      decoder: null,
+      encoding: null
+    },
+    readable: true,
+    _events: [Object: null prototype] {
+      end: [Array],
+      finish: [Function],
+      readable: [Function: pipeOnReadable]
+    },
+    _eventsCount: 3,
+    _maxListeners: undefined,
+    _writableState: WritableState {
+      highWaterMark: 16384,
+      objectMode: true,
+      needDrain: false,
+      ending: true,
+      ended: true,
+      finished: false,
+      decodeStrings: true,
+      defaultEncoding: 'utf8',
+      length: 3,
+      writing: false,
+      sync: false,
+      bufferProcessing: false,
+      onwrite: [Function],
+      writecb: null,
+      writelen: 0,
+      buffer: [Array],
+      errorEmitted: true
+    },
+    writable: true,
+    allowHalfOpen: true,
+    _transformState: TransformState {
+      afterTransform: [Function],
+      needTransform: true,
+      transforming: false,
+      writecb: null,
+      writechunk: null,
+      writeencoding: 'utf8'
+    },
+    _transform: [Function],
+    [Symbol(kCapture)]: false
+  },
+  domainThrown: false
+}

@@ -83,7 +83,8 @@
         function coloreaza(p_selectat) {
             p_selectat.style.color = "red";
         }
-        var toate_parag = document.getElementsByTagName("p");
+        // var toate_parag = document.getElementsByTagName("p");
+        var toate_parag = document.querySelectorAll('p');
         alert(toate_parag.length);
         for (var i = 0; i < toate_parag.length; i++) {
             if (i == 1) {
@@ -94,7 +95,9 @@
         function salut(id) {
             id.innerHTML = 'Acesta este un mesaj scris din javascript!';
         }
-        var element = document.getElementById("myid");
+        // var element = document.getElementById("myid");
+        var element = document.querySelector("#myid");
+        console.log(element);
         salut(element);
 
         // Ce se intampla daca se apeleaza inca o data functia? salut(id);

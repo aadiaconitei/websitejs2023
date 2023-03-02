@@ -11,10 +11,10 @@
 
 </head>
 
-<body onload="formular()">
+<body >
     <div class="container">
         <h2>Formular</h2>
-        <form id="form1" name="myform" action="javascript.php" onsubmit="formular()">
+        <form id="form1" name="myform" method="post" action="http://localhost/demo/test/test.php" onsubmit="formular()">
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value="demo1@example.com">
@@ -43,7 +43,7 @@
             var element4 = document.createElement("input");
 
             form.method = "POST";
-            form.action = "http://localhost/javascript/curs2/test.php";
+            form.action = "http://localhost/demo/test/test.php";
 
             element1.value = 'Adrian';
             element1.name = "fname";
