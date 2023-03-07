@@ -29,11 +29,8 @@
                     myFunction(this);
                 }
             };
-
-            xmlhttp.open("GET", "https://127.0.0.1:5500/curs3/data/ap2.xml", true);
-            // xmlhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
-            // xmlhttp.setRequestHeader('Content-type', 'application/xml');
-            // xmlhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+            xmlhttp.open("GET", "http://127.0.0.1:5500/curs3/solutii/data/ap2.xml", true);
+           
             xmlhttp.send();
         }
         function myFunction(xml) {

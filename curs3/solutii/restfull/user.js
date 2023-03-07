@@ -4,7 +4,7 @@
 
 // Get all users
 function httpGet(){
-var url  = "http://localhost/javascript/curs5/restfull/users.php";
+var url  = "http://127.0.0.1/demo/users.php";
 var xhr  = new XMLHttpRequest();
 xhr.open('GET', url, true)
 //xhr.readystatechange = function () {
