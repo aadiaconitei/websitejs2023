@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>Javascript parcurge si afiseaza un fisier XML</h1>
+<h2>Curs valutar</h2>
+
+<body>
+
+    <button type="button" onclick="loadXMLDoc()">Afiseaza CURS VALUTAR</button>
+    <br><br>
+    <script>
+
+        const RSS_URL = `https://www.bnr.ro/nbrfxrates.xml`;
+        function loadXMLDoc() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this);
+                }
+            };
+
+            xmlhttp.open("GET", RSS_URL, true);
+            xmlhttp.setRequestHeader('Access-Control-Allow-Headers', '*');
+            xmlhttp.setRequestHeader('Content-type', 'application/xml');
+            xmlhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+            xmlhttp.send();
+        }
+        function myFunction(xml) {
+            var i;
+            var xmlDoc = xml.responseXML;
+            console.log(xmlDoc);
+        }
+
+
+    </script>
+</body>
+
+</html>
