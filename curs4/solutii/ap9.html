@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Ajax</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                // $.getJSON(
+                //       "https://official-joke-api.appspot.com/jokes/programming/random", 
+                //    function (result) {
+                //         console.log(result);
+                //          $("div#demo").append(result[0].type + " " + result[0].setup + " " + result[0].punchline + "<br><br>");
+                //     }
+                // );
+
+
+                $.ajax({
+                    type: "GET",
+                    url: "https://official-joke-api.appspot.com/jokes/programming/random",
+                    dataType: 'json',
+                    success: function (result) {
+                        console.log(result);
+                        $("div#demo").append(result[0].type + " " + result[0].setup + " " + result[0].punchline + "<br><br>");
+                
+                    },
+                    
+                });
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    
+    <button>Get JSON data</button>
+
+    <div id="demo"></div>
+
+    
+</body>
+</html>

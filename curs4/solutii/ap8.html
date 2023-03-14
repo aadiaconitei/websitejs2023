@@ -25,8 +25,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         $.ajax({
             type: "GET",
-            url: "https://forbes400.herokuapp.com/api/forbes400?limit=100",
-            //headers: {"Access-Control-Allow-Origin:": "*"},
+            url: "https://forbes400.onrender.com/api/forbes400?limit=100",
             dataType: 'json',
             beforeSend: function () {
                 $('#loader').removeClass('hidden')
